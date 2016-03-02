@@ -13,7 +13,6 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
-
   end
 
   def create
@@ -25,7 +24,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     Article.find(params[:id]).destroy
-    redirect_to article_path
+    redirect_to articles_path
     flash.notice = "Article has been deleted :("
   end
 
